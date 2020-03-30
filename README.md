@@ -1,2 +1,2 @@
 # ProgrammingLabs
-[X][Передача значений по ссылке](https://github.com/kottragu/ProgrammingLabs/tree/master/lab1)
+[x][Передача значений по ссылке](https://github.com/kottragu/ProgrammingLabs/tree/master/lab1)
