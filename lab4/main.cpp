@@ -9,7 +9,7 @@ std::vector<figure_all*> vec;
 
 int commands(){
     int num;
-    cout << "1 - Print all figures" << endl; //отобразить все фигуры
+    cout << "1 - Print all figures" << endl; 
     cout << "2 - square of all figures" << endl;
     cout << "3 - perimeter of all figures" << endl;
     cout << "4 - all mass" << endl;
