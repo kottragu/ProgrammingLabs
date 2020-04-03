@@ -133,7 +133,7 @@ int main() {
             choose_fig();
             continue;
         }
-        if(num_com == 8){
+        else{
             exit(0);
         }
     }
