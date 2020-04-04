@@ -10,7 +10,7 @@ int main() {
     for(int i = 0; i < n; i++){
         arr[i] = rand()/0.283;
     }
-    float x = my_temp(arr, 5);
+    float x = my_temp(arr, n);
     cout << x << endl;
 
 
