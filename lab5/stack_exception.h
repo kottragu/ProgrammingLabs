@@ -7,16 +7,21 @@
 #include <cstdlib>
 #include <ctime>
 
-class StackException{
+class Stack_overflow: public std::exception{
 private:
-    std::string m_error;
+    const char* s_error = "stack is overflow";
 public:
-    StackException(std::string error){
-        m_error = error;
-    }
-    const char* getError(){
-        return m_error.c_str();
+    const char* what() const noexcept{
+        return s_error;
     }
 };
 
+class Stack_empty: public std::exception{
+private:
+    const char* s_error = "stack is empty";
+public:
+    const char* what() const noexcept{
+        return s_error;
+    }
+};
 #endif
