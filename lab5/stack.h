@@ -11,36 +11,35 @@ private:
 public:
     Stack(T num){
         try{
-            if(vec.size() == N){
-                throw StackException("stack id overflow");
+            if(vec.size() == _depth){
+                throw Stack_overflow();      
             }
             vec.push_back(num);
-        }catch (StackException &exception){
-            std::cout << exception.getError() << std::endl;
+        }catch (Stack_overflow &exception){     
+            std::cout << exception.what() << std::endl;
         }
     };
     void Push(T num){
         try{
-            if(vec.size() == N){
-                throw StackException("stack is overflow");
+            if(vec.size() == _depth){
+                throw Stack_empty();        
             }
             vec.push_back(num);
-        }catch (StackException &exception){
-            std::cout << exception.getError() << std::endl;
+        }catch (Stack_empty &exception){         
+            std::cout << exception.what() << std::endl;
         }
     };
     T Pop(){
         try{
             if(vec.size() == 0){
-                throw StackException("stack is empty");
+                throw std::exception();
             }
             vec.back();
-        }catch (StackException &exception){
-            std::cout << exception.getError() <<std::endl;
+        }catch (Stack_empty &exception){
+            std::cout << exception.what() <<std::endl;
         }
     }
 
 };
 
 #endif
-
